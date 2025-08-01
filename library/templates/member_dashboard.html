@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Member Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ member.name }}!</h1>
+    <p>Library Card: {{ member.library_card.card_number }}</p>
+    <h2>Your Borrowed Books</h2>
+    <ul>
+        {% for book in borrowed_books %}
+            <li>{{ book.title }} by {{ book.author.name }}</li>
+        {% empty %}
+            <li>No books borrowed.</li>
+        {% endfor %}
+    </ul>
+    <h2>Available Books</h2>
+    <ul>
+        {% for book in books %}
+        
+           {% if book in borrow_book %}
+            <li>{{ book.title }} <a href="{% url 'borrow_book' book.id %}">Borrow</a></li>
+           {% endif %}
+        {% empty %}
+            <li>No Books Available.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Author Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ author.name }}!</h1>
+    <h2>Your Books</h2>
+    <ul>
+        {% for book in authored_books %}
+            <li>{{ book.title }} (Publisher: {{ book.publisher.name }})</li>
+        {% empty %}
+            <li>No books authored.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>
