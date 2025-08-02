@@ -34,3 +34,11 @@ Database initialization
 * Run for create text < pip freeze > requirement.txt >
 
 * Run for install requirement.txt < pip install -r requirement.txt >
+
+* Run to Push in GITHUB Repository < git init >
+
+* Run to Push in GITHUB Repository < git add . >
+
+* Run to Push in GITHUB Repository < git commit -m "First Commit" >
+
+* Run to Push in GITHUB Repository < git push origin branch_name >
