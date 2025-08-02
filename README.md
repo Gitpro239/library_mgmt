@@ -41,4 +41,4 @@ Database initialization
 
 * Run to Push in GITHUB Repository < git commit -m "First Commit" >
 
-* Run to Push in GITHUB Repository < git push origin branch_name >
+* Run to Push in GITHUB Repository < git push -u origin branch_name >
